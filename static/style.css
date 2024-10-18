@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    color: #48e;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.05);
+}
+
+input[type="text"], input[type="password"] {
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #042704;
+}
+
+input[type="submit"] {
+    padding: 15px 30px;
+    background-color: #5f5cb8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.danger {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.info {
+    color: blue;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.warning {
+    color: orange;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Animaciones adicionales */
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+}
+
+form {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
